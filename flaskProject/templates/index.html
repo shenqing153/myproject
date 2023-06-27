@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>人口增长对社会影响可视化分析</title>
+  <link rel="stylesheet" href="../static/css/index.css" />
+     <script src="../static/js/echarts.min.js"></script>
+     <script src="../static/js/china.js"></script>
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>人口增长对社会影响可视化分析</h1>
+    <div class="showTime"><span></span></div>
+  </header>
+  <section class="mainbox">
+    <div class="column">
+      <div class="panel line">
+        <h2>人口增长与人口老龄化</h2>
+        <div  id='left1' class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel pie">
+        <h2>人口增长与消费投资劳动力</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="no">
+        <div class="no-hd">
+          <ul>
+            <li class="counter">1495352481</li>
+            <li class="counter">121000000</li>
+          </ul>
+        </div>
+        <div class="no-bd">
+          <ul>
+            <li>全国总人口</li>
+            <li>人口TOP1：广东</li>
+          </ul>
+        </div>
+      </div>
+      <div class="map">
+        <div class="chart"></div>
+        <div class="map1"></div>
+        <div class="map2"></div>
+        <div class="map3"></div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="panel circle">
+        <h2>人口比例情况分析</h2>
+        <div class="chart" id="echart5"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel bar1">
+        <h2>2022年人口城镇化TOP20</h2>
+        <div id="rule">
+          <div class="list" id="list">
+            <p><span>上海</span><span>2568.3万人</span><span>96.10%</span></p>
+            <p><span>北京</span><span>2154.3万人</span><span>91.40%</span></p>
+            <p><span>广州</span><span>867.2万人</span><span>69.52%</span></p>
+            <p><span>深圳</span><span>650.3万人</span><span>87.28%</span></p>
+            <p><span>天津</span><span>1270.2万人</span><span>88.50%</span></p>
+            <p><span>成都</span><span>836.3万人</span><span>61.55%</span></p>
+            <p><span>重庆</span><span>1612.6万人</span><span>81.20%</span></p>
+            <p><span>武汉</span><span>725.3万人</span><span>59.11%</span></p>
+            <p><span>杭州</span><span>570.4万人</span><span>73.66%</span></p>
+            <p><span>南京</span><span>612.9万人</span><span>73.10%</span></p>
+            <p><span>苏州</span><span>400.6万人</span><span>60.00%</span></p>
+            <p><span>西安</span><span>530.5万人</span><span>57.75%</span></p>
+            <p><span>沈阳</span><span>472.6万人</span><span>64.68%</span></p>
+            <p><span>郑州</span><span>522.6万人</span><span>56.28%</span></p>
+            <p><span>长沙</span><span>413.5万人</span><span>51.28%</span></p>
+            <p><span>合肥</span><span>429.8万人</span><span>65.11%</span></p>
+            <p><span>福州</span><span>268.4万人</span><span>68.29%</span></p>
+            <p><span>济南</span><span>425.3万人</span><span>59.18%</span></p>
+            <p><span>南昌</span><span>315.7万人</span><span>50.82%</span></p>
+            <p><span>太原</span><span>280.3万人</span><span>60.58%</span></p>
+          </div>
+          <div class="list2" id="list2"></div>
+        </div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </section>
+  <script src="../static/js/myMap.js"></script>
+  <script src="../static/js/index.js"></script>
+  <script src="../static/js/controller.js"></script>
+  <script src="../static/js/left1.js"></script>
+  <script src="../static/js/right.js"></script>
+  <script src="../static/js/left2.js"></script>
+<script src="../static/js/flexible.js"></script>
+  <script src="../static/js/jquery.js"></script>
+  <script src="../static/js/jquery.waypoints.min.js"></script>
+  <script src="../static/js/jquery.countup.min.js"></script>
+
+  <script type="text/javascript">
+    $('.counter').countUp({
+      delay: 10,
+      time: 1000
+    });
+  </script>
+
+  <script>
+    (function (fn) {
+      fn();
+      setInterval(fn, 1000);
+    })(function () {
+      var dt = new Date();
+      document.querySelector(".showTime span").innerHTML =
+        dt.getFullYear() + "-" +
+        (dt.getMonth() + 1) + "-" +
+        dt.getDate() + " " +
+        dt.getHours() + ":" +
+        dt.getMinutes() + ":" +
+        dt.getSeconds() + "";
+    });
+  </script>
+</body>
+
+</html>
